@@ -1,0 +1,109 @@
+FAQs to read:
+
+ELB
+VPC
+
+Topic to revise:
+Security->Security -IAM
+WellArchitecture
+
+
+65 questions
+72% =47 questions need to be corrected
+130 minetes
+
+2minutes for a questions to anser
+
+Tips:
+1. Check all "Key words"
+2. Read till the end of question, don't ignore
+3. In the revision, read carefullly the question and answers.
+4. Don't mark every question for review. It can change the correct results also to wrong in the review.
+5. Don't misundersttod question by assuming different context with key words 
+    ex: Your cloud architecture should process the data in close geographical proximity to your users  --> it dosn't mean you need to used geoproximity routing. But, use CloudFront Edge.
+	
+	
+
+AWS Neptune: 
+Amazon Neptune is a fast, reliable, fully managed graph database service that makes it easy to build and run applications that work with highly connected datasets.
+
+ Amazon Lightsail: 
+ Amazon Lightsail is the easiest way to get started with AWS for developers, small businesses, students, and other users who need a simple virtual private server (VPS) solution. Lightsail provides developers compute, storage, and networking capacity and capabilities to deploy and manage websites and web applications in the cloud. Lightsail includes everything you need to launch your project quickly – a virtual machine, SSD-based storage, data transfer, DNS management, and a static IP – for a low, predictable monthly price.
+ 
+ AWS Fargate:
+ AWS Fargate is a serverless compute engine for containers that works with both Amazon Elastic Container Service (ECS) and Amazon Elastic Kubernetes Service (EKS). Fargate makes it easy for you to focus on building your applications. Fargate removes the need to provision and manage servers, lets you specify and pay for resources per application, and improves security through application isolation by design.
+ 
+Amazon FSx for Lustre:
+Amazon FSx for Lustre provides a high-performance file system optimized for fast processing of workloads such as machine learning, high performance computing (HPC), video processing, financial modeling, and electronic design automation (EDA). These workloads commonly require data to be presented via a fast and scalable file system interface, and typically have data sets stored on long-term data stores like Amazon S3.
+
+Operating high-performance file systems typically requires specialized expertise and administrative overhead, requiring you to provision storage servers and tune complex performance parameters. With Amazon FSx, you can launch and run a file system that provides sub-millisecond access to your data and allows you to read and write data at speeds of up to hundreds of gigabytes per second of throughput and millions of IOPS.
+
+Amazon FSx for Lustre works natively with Amazon S3, making it easy for you process cloud data sets with high performance file systems. When linked to an S3 bucket, an FSx for Lustre file system transparently presents S3 objects as files and allows you to write results back to S3. You can also use FSx for Lustre as a standalone high-performance file system to burst your workloads from on-premises to the cloud. By copying on-premises data to an FSx for Lustre file system, you can make that data available for fast processing by compute instances running on AWS. With Amazon FSx, you pay for only the resources you use. There are no minimum commitments, upfront hardware or software costs, or additional fees.
+
+ AWS Backup:
+ AWS Backup is a centralized backup service that makes it easy and cost-effective for you to back up your application data across AWS services in the AWS Cloud and on premises, helping you meet your business and regulatory backup compliance requirements. AWS Backup makes protecting your AWS storage volumes, databases, and file systems simple by providing a central place where you can configure and audit the AWS resources you want to back up, automate backup scheduling, set retention policies, and monitor all recent backup and restore activity.
+ 
+ AWS Transfer for SFTP:
+ AWS Transfer for SFTP (AWS SFTP) is a fully managed service hosted in AWS that enables the transfer of files over SFTP directly in and out of Amazon S3.
+ 
+ 
+ AWS Database Migration Service:
+ AWS Database Migration Service is the free AWS Schema Conversion Tool (SCT) that automates the conversion of Oracle PL/SQL and SQL Server T-SQL code to equivalent code in the Amazon Aurora / MySQL dialect of SQL or the equivalent PL/pgSQL code in PostgreSQL. When a code fragment cannot be automatically converted to the target language, SCT will clearly document all locations that require manual input from the application developer.
+ 
+ 
+ AWS Systems Manager:
+ AWS Systems Manager allows you to centralize operational data from multiple AWS services and automate tasks across your AWS resources. You can create logical groups of resources such as applications, different layers of an application stack, or production versus development environments. With Systems Manager, you can select a resource group and view its recent API activity, resource configuration changes, related notifications, operational alerts, software inventory, and patch compliance status. You can also take action on each resource group depending on your operational needs. Systems Manager provides a central place to view and manage your AWS resources, so you can have complete visibility and control over your operations.
+ 
+ 
+ Amazon Rekognition:
+ Amazon Rekognition is a service that makes it easy to add powerful visual analysis to your applications. Rekognition Image lets you easily build powerful applications to search, verify, and organize millions of images. Rekognition Video lets you extract motion-based context from stored or live stream videos and helps you analyze them.
+ 
+ Amazon SageMaker:
+ Amazon SageMaker is a fully managed service that provides every developer and data scientist with the ability to build, train, and deploy machine learning (ML) models quickly. SageMaker removes the heavy lifting from each step of the machine learning process to make it easier to develop high quality models.
+ 
+ Amazon Translate:
+ Amazon Translate is a Neural Machine Translation (MT) service for translating text between supported languages. Powered by deep learning methods, the service provides high quality and affordable machine translation, enabling developers to translate company and user-authored content, or build applications requiring support across multiple languages. The service can be used via an API, enabling real-time translation of text from the source language to the target language.
+ 
+ Amazon Transcribe:
+ Amazon Transcribe is an AWS service that makes it easy for customers to convert speech-to-text. Using Automatic Speech Recognition (ASR) technology, customers can choose to use Amazon Transcribe for a variety of business applications, including transcription of voice-based customer service calls, generation of subtitles on audio/video content, and conduct (text based) content analysis on audio/video content.  
+ 
+ Amazon CloudSearch:
+ Amazon CloudSearch is a fully-managed service in the AWS Cloud that makes it easy to set up, manage, and scale a search solution for your website or application.
+ 
+ Amazon Elasticsearch Service:
+ Amazon Elasticsearch Service is a managed service that makes it easy to deploy, operate, and scale Elasticsearch clusters in the AWS Cloud.
+ Elasticsearch is an independent product developed by elastic.co, which means you can set up Elasticsearch independently by downloading and extracting the tar ball, or through a yum/apt-get install.
+ 
+  Amazon QuickSight:
+  Amazon QuickSight is a very fast, easy-to-use, cloud-powered business analytics service that makes it easy for all employees within an organization to build visualizations, perform ad-hoc analysis, and quickly get business insights from their data, anytime, on any device. Upload CSV and Excel files; connect to SaaS applications like Salesforce; access on-premises databases like SQL Server, MySQL, and PostgreSQL; and seamlessly discover your AWS data sources such as Amazon Redshift, Amazon RDS, Amazon Aurora, Amazon Athena, and Amazon S3. QuickSight enables organizations to scale their business analytics capabilities to hundreds of thousands of users, and delivers fast and responsive query performance by using a robust in-memory engine (SPICE).
+  
+  
+Analytics-  
+Aethna : 
+interactive query service that makes it easy to analyze data in Amazon S3 using standard SQL. Athena is serverless.
+
+S3 Select: 
+It enables applications to retrieve only a subset of data from an object by using simple SQL expressions. By using S3 Select to retrieve only the data needed by your application, you can achieve drastic performance increases – in many cases you can get as much as a 400% improvement.
+
+Redshift Spectrum:  
+Amazon Redshift Spectrum provides a similar in-query functionality like S3 Select, this service is more suitable for querying your data from the Redshift external tables hosted in S3
+
+AWS Glue 	:  
+AWS Glue is a fully managed extract, transform, and load (ETL) service that makes it easy for customers to prepare and load their data for analytics. You can create and run an ETL job with a few clicks in the AWS Management Console. You simply point AWS Glue to your data stored on AWS, and AWS Glue discovers your data and stores the associated metadata (e.g. table definition and schema) in the AWS Glue Data Catalog. Once cataloged, your data is immediately searchable, queryable, and available for ETL.
+
+
+Application Integration-
+Amazon SWF:
+Amazon Simple Workflow Service (SWF) is a web service that makes it easy to coordinate work across distributed application components. Amazon SWF enables applications for a range of use cases, including media processing, web application back-ends, business process workflows, and analytics pipelines, to be designed as a coordination of tasks. Tasks represent invocations of various processing steps in an application which can be performed by executable code, web service calls, human actions, and scripts.
+
+The coordination of tasks involves managing execution dependencies, scheduling, and concurrency in accordance with the logical flow of the application. With Amazon SWF, developers get full control over implementing processing steps and coordinating the tasks that drive them, without worrying about underlying complexities such as tracking their progress and keeping their state. Amazon SWF also provides the AWS Flow Framework to help developers use asynchronous programming in the development of their applications. By using Amazon SWF, developers benefit from ease of programming and have the ability to improve their applications’ resource usage, latencies, and throughputs.
+
+
+AWS Step Functions:
+AWS Step Functions is a fully managed service that makes it easy to coordinate the components of distributed applications and microservices using visual workflows. Building applications from individual components that each perform a discrete function lets you scale easily and change applications quickly. Step Functions is a reliable way to coordinate components and step through the functions of your application. Step Functions provides a graphical console to arrange and visualize the components of your application as a series of steps. This makes it simple to build and run multi-step applications. Step Functions automatically triggers and tracks each step, and retries when there are errors, so your application executes in order and as expected. Step Functions logs the state of each step, so when things do go wrong, you can diagnose and debug problems quickly. You can change and add steps without even writing code, so you can easily evolve your application and innovate faster.
+
+AWS Step Functions is a fully managed service that makes it easy to coordinate the components of distributed applications and microservices using visual workflows. Instead of writing a Decider program, you define state machines in JSON. AWS customers should consider using Step Functions for new applications. If Step Functions does not fit your needs, then you should consider Amazon Simple Workflow (SWF). Amazon SWF provides you complete control over your orchestration logic, but increases the complexity of developing applications. You may write decider programs in the programming language of your choice, or you may use the Flow framework to use programming constructs that structure asynchronous interactions for you. AWS will continue to provide the Amazon SWF service, Flow framework, and support all Amazon SWF customers.
+
+Desktop & App Streaming-
+Amazon AppStream:
+Amazon AppStream 2.0 is a fully managed application streaming service that provides users instant access to their desktop applications from anywhere. Amazon AppStream 2.0 simplifies application management, improves security, and reduces costs by moving a company’s applications from their users’ physical devices to the AWS Cloud. The Amazon AppStream 2.0 streaming protocol provides users a responsive, fluid performance that is almost indistinguishable from a natively installed application. With Amazon AppStream 2.0, organizations can realize increased flexibility, improved scalability, and the agility to support a broad range of compute and storage requirements for their applications.
