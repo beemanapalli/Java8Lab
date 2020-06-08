@@ -3,9 +3,12 @@ package com.streams;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
@@ -21,6 +24,7 @@ import static org.junit.Assert.assertEquals;
 import com.test.data.SampleData;
 import com.test.data.Track;
 import com.test.data.Artist;
+import com.test.data.Product;
 
 
 
@@ -100,7 +104,7 @@ public class SyntaxExample
 	    		
 	}
 	
-	public void testReduct(){
+	public void testReduce(){
 		int result =Stream.of(-1).reduce(5, (acc,ele)->acc-ele);
 		out.println("Reduce to Minus operation, with -ve input(-1) and +ve initial vaue(5) : "+result);
 		
@@ -110,7 +114,7 @@ public class SyntaxExample
 		result =Stream.of(1).reduce(5, (acc,ele)->acc-ele);
 		out.println("Reduce to Minus operation  with +ve input and +ve initial value: "+result);
 		
-		result =Stream.of(1).reduce(5, (acc,ele)->acc+ele);
+		result =Stream.of(1,2,3).reduce(5, (acc,ele)->acc+ele);
 		out.println("Reduce to Plus operation  with +ve input and +ve innitial value "+result);
 		
 		result =Stream.of(-1).reduce(5, (acc,ele)->acc+ele);
@@ -124,6 +128,16 @@ public class SyntaxExample
 		 *  to a single value that will be applied on to initial value and opration given .
 		 * 
 		 */
+	}
+	
+	public void testCombiner() {
+		int reducedParams =Stream.of(1, 2, 3)
+				  .reduce(10, (a, b) -> a + b, (a, b) -> {
+				     
+				     return a + b;
+				  });
+		
+		out.println("Combiner without parallel : "+ reducedParams);
 	}
 	
 	public void testReduceToList() {
@@ -163,19 +177,73 @@ public class SyntaxExample
 		 */
 	}
 	
+	public void testPrimitiveStream() {
+		IntStream ist =IntStream.range(1, 4);
+		out.println("IntStream elements : " + ist.sum());
+	}
+	
+	public void testReduceToString() {
+		
+		String stringProducts =SampleData.productList.stream().map(Product::getName)
+				               .collect(Collectors.joining(",","[","]"));
+		out.println("Product list of strings "+","+" seperated : "+stringProducts);
+	}
+	
+	public void testNumberAveraging() {
+		double priceAvg =SampleData.productList.stream().collect(Collectors.averagingInt(Product::getPrice));
+		out.println("Average Price: "+priceAvg);
+	}
+	public void testNumberSumm() {
+		int sum =SampleData.productList.stream().collect(Collectors.summingInt(Product::getPrice));
+		out.println("Sum of price : "+sum);
+		
+	}
+	public void testGroupingBy() {
+		Map<Integer,List<Product>> productMapByPrice =SampleData.productList.stream()
+				                                      .collect(Collectors.groupingBy(Product::getPrice));
+		
+		productMapByPrice.forEach((k,v)->
+		{
+			out.println("Product price : "+k);
+			v.forEach(product -> out.println("  Product name : "+product.getName()) );
+		});
+				
+				;
+	}
+	
+	public void testGroupByPredicate() {
+		Map<Boolean,List<Product>> productMapByPrice =SampleData.productList.stream()
+				.collect(Collectors.partitioningBy(element -> element.getPrice() >15));	
+		
+		productMapByPrice.forEach((k,v) ->
+		{
+				out.println("Status : "+k);
+				v.forEach(element -> out.println("Value : "+element.getName()));
+		}
+				);
+	}
 	public static void main(String args[]) {
 		SyntaxExample se =new SyntaxExample();
-			
+		
+		se.testGroupByPredicate();
+		/*se.testGroupingBy();
+		se.testNumberSumm();
+		se.testNumberAveraging();
+		
 		out.println("List count : "+se.countInternalIteration());
 		out.println("Count by location : "+se.getArtistCountByLocation("UK"));
 		out.println("Collect list size : "+(se.collect()).size());
 		se.map();
 		se.flatMapTest();
 		se.testMinMaxByComparing();
-		se.testReduct();
+		se.testReduce();
 		se.testForEachWithStreams();
 		se.testChainedStreams();
 		se.testReduceToList();
+		se.testPrimitiveStream();
+		se.testCombiner();
+		se.testReduceToString();
+		*/
 		}
 	
 

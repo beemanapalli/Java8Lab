@@ -7,6 +7,15 @@ import java.util.stream.Stream;
 import static java.util.Arrays.asList;
 
 public class SampleData {
+	
+	
+	public static final Product potatoes = new Product(23, "potatoes");
+	public static final Product orange = new Product(14, "orange");
+	public static final Product lemon = new Product(13, "lemon");
+	public static final Product bread = new Product(23, "bread");
+	public static final Product sugar = new Product(13, "sugar");
+	
+	public static final List<Product> productList = Arrays.asList(potatoes,orange,lemon,bread,sugar);
 
     public static final Artist johnColtrane = new Artist("John Coltrane", "US");
 
